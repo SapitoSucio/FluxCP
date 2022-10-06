@@ -3,14 +3,14 @@
 // the default, and should be changed as needed.
 return array(
 	'ServerAddress'				=> 'localhost',				// This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
-	'BaseURI'					=> 'fluxcp',						// The base URI is the base web root on which your application lies.
+	'BaseURI'					=> '',						// The base URI is the base web root on which your application lies.
 	'InstallerPassword'			=> 'secretpassword',		// Installer/updater password.
 	'RequireOwnership'			=> true,					// Require the executing user to be owner of the FLUX_ROOT/data/ directory tree? (Better for security)
 															// WARNING: This will be mostly IGNORED on non-POSIX-compliant OSes (e.g. Windows).
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
 	'DefaultLanguage'			=> 'en_us',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
-	'SiteTitle'					=> 'Flux Control Panel',	// This value is only used if the theme decides to use it.
+	'SiteTitle'					=> 'Froggy RO',	// This value is only used if the theme decides to use it.
 	'ThemeName'					=> array('default', 'bootstrap'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
 	'MissingEmblemBMP'			=> 'empty.bmp',				//
@@ -25,8 +25,8 @@ return array(
 	'SessionCookieExpire'		=> 48,						// Duration in hours.
 	'AdminMenuGroupLevel'		=> AccountLevel::LOWGM,		// The starting group ID for which module actions are moved into the admin menu for display.
 	'DateDefaultTimezone'		=> 'UTC',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
-	'DateFormat'				=> 'Y-m-d',					// Default DATE format to be displayed in pages.
-	'DateTimeFormat'			=> 'Y-m-d H:i:s',			// Default DATETIME format to be displayed in pages.
+	'DateFormat'				=> 'd-m-Y',					// Default DATE format to be displayed in pages.
+	'DateTimeFormat'			=> 'd-m-Y H:i:s',			// Default DATETIME format to be displayed in pages.
 	'ShowSinglePage'			=> true,					// Whether or not to show the page numbers even if there's only one page.
 	'ResultsPerPage'			=> 20,						// The number of results to display in a paged set, per page.
 	'PagesToShow'				=> 10,						// The number of page numbers to display at once.
@@ -40,10 +40,10 @@ return array(
 															// PCRE Pattern Ref: http://php.net/manual/en/pcre.pattern.php
 	'MinUsernameLength'			=> 4,						// Minimum username length.
 	'MaxUsernameLength'			=> 23,						// Maximum username length.
-	'MinPasswordLength'			=> 8,						// Minimum password length.
+	'MinPasswordLength'			=> 6,						// Minimum password length.
 	'MaxPasswordLength'			=> 31,						// Maximum password length.
-	'PasswordMinUpper'			=> 1,						// Number of upper-case letters to require in passwords.
-	'PasswordMinLower'			=> 1,						// Number of lower-case letters to require in passwords.
+	'PasswordMinUpper'			=> 0,						// Number of upper-case letters to require in passwords.
+	'PasswordMinLower'			=> 0,						// Number of lower-case letters to require in passwords.
 	'PasswordMinNumber'			=> 1,						// Number of numbers to require in passwords.
 	'PasswordMinSymbol'			=> 0,						// Number of symbols to require in passwords.
 	'GMMinPasswordLength'		=> 8,						// Minimum password length for GM accounts.
@@ -55,9 +55,9 @@ return array(
 	'AllowUserInPassword'		=> false,					// Whether or not to allow the password to contain the username. (NOTE: A case-insensitive search is performed)
 	'AllowDuplicateEmails'		=> false,					// Whether or not to allow duplicate e-mails to be used in registration. (See Mailer config options)
 	'RequireEmailConfirm'		=> false,					// Require e-mail confirmation during registration.
-	'RequireChangeConfirm'		=> false,					// Require confirmation when changing e-mail addresses.
+	'RequireChangeConfirm'		=> true,					// Require confirmation when changing e-mail addresses.
 	'EmailConfirmExpire'		=> 48,						// E-mail confirmations expire hours. Unconfirmed accounts will expire after this period of time.
-	'PincodeEnabled'			=> true,					// Whether or not the pincode system is enabled in your server. (Check your char_athena.conf file. Enabled by default.)
+	'PincodeEnabled'			=> false,					// Whether or not the pincode system is enabled in your server. (Check your char_athena.conf file. Enabled by default.)
 	'MailerFromAddress'			=> 'noreply@localhost',		// The e-mail address displayed in the From field.
 	'MailerFromName'			=> 'MailerName',			// The name displayed with the From e-mail address.
 	'MailerUseSMTP'				=> false,					// Whether or not to use a separate SMTP server for sending mail.

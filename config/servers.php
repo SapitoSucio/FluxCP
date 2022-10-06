@@ -4,7 +4,7 @@ return array(
 	// specify multiple server groups (however they should share the same login
 	// server whilst they are allowed to have multiple char/map pairs).
 	array(
-		'ServerName'     => 'FluxRO',
+		'ServerName'     => 'fROggy',
 		// Global database configuration (excludes logs database configuration).
 		'DbConfig'       => array(
 			//'Socket'     => '/tmp/mysql.sock',
@@ -13,10 +13,10 @@ return array(
 			'Convert'    => 'utf8',
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
-			'Hostname'   => '127.0.0.1',
-			'Username'   => 'ragnarok',
-			'Password'   => 'ragnarok',
-			'Database'   => 'ragnarok',
+			'Hostname'   => '192.168.0.195',
+			'Username'   => 'root',
+			'Password'   => 'dietpi',
+			'Database'   => 'rathenadb',
 			'Persistent' => true,
 			'Timezone'   => null // Example: '+0:00' is UTC.
 			// The possible values of 'Timezone' is as documented from the MySQL website:
@@ -34,10 +34,10 @@ return array(
 			'Convert'    => 'utf8',
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
-			'Hostname'   => '127.0.0.1',
-			'Username'   => 'ragnarok',
-			'Password'   => 'ragnarok',
-			'Database'   => 'ragnarok',
+			'Hostname'   => '192.168.0.195',
+			'Username'   => 'root',
+			'Password'   => 'dietpi',
+			'Database'   => 'rathenadblog',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
 		),
@@ -52,32 +52,32 @@ return array(
 		),
 		'CharMapServers' => array(
 			array(
-				'ServerName'      => 'FluxRO',
+				'ServerName'      => 'fROggy',
 				'Renewal'         => true,
 				'MaxCharSlots'    => 9,
-				'DateTimezone'    => null, // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
+				'DateTimezone'    => 'America/Merida', // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
 				//'ResetDenyMaps'   => 'sec_pri', // Defaults to 'sec_pri'. This value can be an array of map names.
 				//'Database'        => 'ragnarok', // Defaults to DbConfig.Database
 				'ExpRates' => array(
-					'Base'        => 100, // Rate at which (base) exp is given
-					'Job'         => 100, // Rate at which job exp is given
-					'Mvp'         => 100  // MVP bonus exp rate
+					'Base'        => 50000, // Rate at which (base) exp is given
+					'Job'         => 50000, // Rate at which job exp is given
+					'Mvp'         => 50000  // MVP bonus exp rate
 				),
 				'DropRates' => array(
 					// If drop rate was below this amount and bonus is applied to it, the bonus can't make it exceed this amount.
 					'DropRateCap' => 9000,
 					// The rate the common items (in the ETC tab, besides card) are dropped
-					'Common'      => 100,
-					'CommonBoss'  => 100,
-					'CommonMVP'   => 100,
+					'Common'      => 2000,
+					'CommonBoss'  => 2000,
+					'CommonMVP'   => 2000,
 					'CommonMin'   => 1,
 					'CommonMax'   => 10000,
 					// The rate healing items (that restore HP or SP) are dropped
-					'Heal'        => 100,
-					'HealBoss'    => 100,
-					'HealMVP'     => 100,
+					'Heal'        => 2000,
+					'HealBoss'    => 2000,
+					'HealMVP'     => 2000,
 					'HealMin'     => 1,
-					'HealMax'     => 10000,
+					'HealMax'     => 2000,
 					// The rate usable items (in the item tab other then healing items) are dropped
 					'Useable'     => 100,
 					'UseableBoss' => 100,
